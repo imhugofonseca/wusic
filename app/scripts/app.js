@@ -1,15 +1,11 @@
 'use strict';
 
 /**
- * @ngdoc overview
- * @name ubiwhereApp
- * @description
- * # ubiwhereApp
- *
  * Main module of the application.
+ * Modulo principal da aplicação
  */
 angular
-  .module('ubiwhereApp', [
+  .module('wusicApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -19,15 +15,19 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
+
+      // Music list route
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        templateUrl: 'views/list.html',
+        controller: 'FeedController',
+        controllerAs: 'feed'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+
+      // Music details route
+      .when('/music/:name', {
+        templateUrl: 'views/music.html',
+        controller: 'MusicController',
+        controllerAs: 'music'
       })
       .otherwise({
         redirectTo: '/'

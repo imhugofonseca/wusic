@@ -1,6 +1,10 @@
 // bower:scss
 // endbower
 
+
+@import '_media';
+@import '_wusic';
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -10,6 +14,7 @@
 
 body {
   padding: 0;
+  font-family: "Raleway", "Helvetica", sans-serif;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -22,15 +27,27 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  //border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
-
+  background:#1ABC9C;
+  padding:20px 0;
+  
+  a {
+    text-align: center;
+    font-size: 2em;
+    color:white;
+    display: block;
+    width:100%;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
     margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+    text-align: center;
+    font-weight: 100;
+    color:white;
   }
 }
 
@@ -65,25 +82,3 @@ body {
   }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
