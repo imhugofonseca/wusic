@@ -9,12 +9,12 @@
 				
 				<div class="out-img col-md-3">
 					<img class="music-img " imgload="countLoad()" src="{{ music.track_image_file }}" alt="{{ music.track_title }}" />
-					<div class="music-img-overlay">
-						<div class="play-container">
+					<div class="music-img-overlay" ng-class="music.track_id == playingId ? 'playing' : ''">
+						<div class="play-container" ng-class="music.track_id == playingId ? 'playing' : ''">
 						  <span class="pause-btn"   ng-click="pause($event)">
-						    <span class="pause" ></span>
+						    <span class="pause" ng-class="music.track_id == playingId ? 'show' : ''"></span>
 						  </span>
-						  <span class="play"  ng-click="play($event, music)"></span>
+						  <span class="play" ng-class="music.track_id == playingId ? 'playing' : ''" ng-click="play($event, music)"></span>
 						</div>
 					</div>
 				</div>

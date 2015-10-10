@@ -16,5 +16,20 @@
   .header {
     margin-bottom: 30px;
   }
+  
 
+
+}
+
+
+@media screen and (max-width:900px) {
+    .header-song .info {
+    padding:20px 0!important;
+    text-align: center!important;
+  }
+
+  .header-song .down {
+    padding:20px 0!important;
+    text-align: center;
+  }
 }

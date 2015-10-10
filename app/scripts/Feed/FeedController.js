@@ -11,70 +11,36 @@ angular.module('wusicApp')
 
   .controller('FeedController', function ($scope, $rootScope, freeMusicService, playerService) {
 
-  		$scope.musics = {};
+  		$scope.musics = null;
+  		$scope.playingId = playerService.id;
   		var count = 0;
 
+  		if(freeMusicService.list() === null) {
 
-  		freeMusicService.get().then(function () {
+  			freeMusicService.get().then(function () {
 
-  			// Shuffle array because albums are all together
-  			$scope.musics = shuffleArray(freeMusicService.list());
-  			console.log($scope.musics);
-  			
+	  			// Shuffle array because albums are all together
+	  			$scope.musics = freeMusicService.list();
+	  		
+	  		});
 
-  		});
+  		}else {
+        $scope.musics = freeMusicService.list();
+      }
+
 
   		// Wait for all images to load
   		// Looks better
   		$scope.countLoad = function () {
-  			if(count >= $scope.musics.length-1)
+  			if(count >= $scope.musics.length-1){
   				$('.loader').addClass('loaded');
+  				count = 0;
+  			}
 
   			count++;
   		}
-
-  		$scope.play = function (event, music) {
-
-  			// Animation
-  			$(event.target).addClass('playing');
-
-  			//Lazy
-  			angular.element(event.target)
-		  		   .parent().parent().addClass('playing');
-
-  			angular.element(event.target)
-		  			.parent().addClass('playing');
-  			angular.element(event.target)
-		  			.parent()
-		  			.children('.pause-btn')
-		  			.children('.pause')
-		  			.addClass('show');
-
-		  	// Trigger
-		  	playerService.playmp3(music);
-  		}
-
-  		$scope.pause = function (event, track) {
-
-  			// Animation
-  			$(event.target).removeClass('show');
-
-  			angular.element(event.target)
-		  		   .parent().parent().parent().removeClass('playing');
-
-  			angular.element(event.target)
-		  			.parent()
-		  			.parent()
-		  			.removeClass('playing');
-
-  			angular.element(event.target)
-		  			.parent()
-		  			.parent()
-		  			.children('.play')
-		  			.removeClass('playing');
-
-		  	// Trigger
-		  	playerService.pause();
-  		}
+  		
+  		$scope.play = playerService.playExe;
+  		$scope.pause = playerService.pauseExe;
 
   });

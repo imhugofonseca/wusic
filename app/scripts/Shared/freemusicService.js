@@ -27,7 +27,7 @@ angular.module('wusicApp')
 			},
 
 			// Returns all musics
-			list : function () { return getData; },
+			list : function () { return (getData != null ? shuffleArray(getData) : null); },
 
 			// Gets certain music by handle
 			search : function ($val) { 
