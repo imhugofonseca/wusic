@@ -1,0 +1,24 @@
+<!doctype html> <html> <head> <meta charset="utf-8"> <title>Wusic - As musicas gratuitas mais recentes</title> <meta name="description" content="Ouvir musicas gratuitas mais recentes"> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.9f75b93c.css"> <link rel="stylesheet" href="styles/main.ca118ae4.css"> </head> <body ng-app="wusicApp" class="wusicApp"> <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--> <!-- Application Header --> <div class="header"> <div class="navbar" role="navigation"> <div class="container"> <div class="col-md-12"> <h1 class="hide">Wusic</h1> <a class="navbar-brand" href="/#/">Wusic <small>As musicas mais recentes gratuitas</small></a> </div> <div class="col-md-4 hide"> <div class="ui player" ng-controller="PlayerController"> <!--<span>Playing:<br/>{{name}}<br/>{{artist}}</span>--> <audio src="{{mp3 | trusted}}" autoplay></audio> </div> </div> </div> </div> </div> <!-- Application Content --> <div class="view content"> <div ng-view=""></div> </div> <div class="ui loader"> <div id="bars"> <ul> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> </ul> </div> </div> <!-- Google Analytics
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+    --> <script src="scripts/vendor.03f2019a.js"></script> <script src="scripts/scripts.a90b8c0e.js"></script> <script>WebFontConfig = {
+    google: { families: [ 'Open+Sans:400,800,100:latin'  ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();</script> </body> </html>
