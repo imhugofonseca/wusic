@@ -1,0 +1,66 @@
+<div class="page music-page">
+	
+	<div class="header-song" style="background-image:url({{ music.track_image_file }})">
+
+		<div class="overlay"></div>
+
+		<div class="container clearfix">
+			<div class="ui music-card big">
+				
+				<div class="out-img col-md-3">
+					<img class="music-img " imgload="countLoad()" src="{{ music.track_image_file }}" alt="{{ music.track_title }}" />
+					<div class="music-img-overlay">
+						<div class="play-container">
+						  <span class="pause-btn"   ng-click="pause($event)">
+						    <span class="pause" ></span>
+						  </span>
+						  <span class="play"  ng-click="play($event, music)"></span>
+						</div>
+					</div>
+				</div>
+
+
+					
+				<div class="info col-md-7">
+
+						<h5 class="music-title">{{ music.track_title }}</h5>
+						<p class="music-text"><small class="text-muted">{{ music.artist_name }}</small></p>
+					
+				</div>
+
+				<div class="col-md-2 down">
+					<a class="btn" href="{{ music.track_file_url }}"><span class="glyphicon glyphicon-arrow-down"></span>Download</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-song">
+		
+		<div class="container">
+			
+			<div class="col-md-6">
+				<h2>Info</h2>
+
+				<ul>
+					<li><b>Duração:</b> {{music.track_duration}}</li>
+					<li><b>Bitrate:</b> {{music.track_bit_rate}}</li>
+					<li><b>Downlds:</b> {{music.downloads}}</li>
+				</ul>
+			</div>
+
+			<div class="col-md-6">
+				<h2>Album</h2>
+
+				<ul>
+					<li><b>Nome:</b> {{music.album_title}}</li>
+					<li><b>Licença:</b> {{music.license_title}}</li>
+
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

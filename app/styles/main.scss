@@ -1,7 +1,12 @@
 // bower:scss
 // endbower
 
+// Variables
+$primary : #1C2020;
+$secondary: #D1345B;
 
+@import "compass/css3";
+@import '_animations';
 @import '_media';
 @import '_wusic';
 
@@ -14,8 +19,26 @@
 
 body {
   padding: 0;
-  font-family: "Raleway", "Helvetica", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
+  background:$primary;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
 }
+
+a {
+  color:$secondary;
+  transition: all .5s ease;
+
+  &:hover,&:active{
+    text-decoration: none;
+    color:darken($secondary, 12)
+  }
+
+}
+
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -28,26 +51,43 @@ body {
 /* Custom page header */
 .header {
   //border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-  background:#1ABC9C;
+  margin-bottom: 0;
+  background:#1d1d1d;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3), 0px 1px 0px rgba(255, 255, 255, 0.08) inset;
   padding:20px 0;
+  text-align: center;
+  
   
   a {
-    text-align: center;
+    
     font-size: 2em;
     color:white;
-    display: block;
+    font-family: "Raleway";
     width:100%;
+    display: block;
     text-transform: uppercase;
     font-weight: 800;
+    
+    color:$secondary;
+
+    small {
+          font-weight: normal;
+          font-size: 12px;
+          display: block;
+          line-height: 2.5em;
+          color:white;
+
+
+    }
   }
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
     margin-bottom: 0;
-    text-align: center;
-    font-weight: 100;
+
+    font-weight: 300;
     color:white;
+    display: block;
   }
 }
 

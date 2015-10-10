@@ -24,19 +24,44 @@
     <div class="header">
       <div class="navbar " role="navigation">
         <div class="container">
-            <h1 class="hide">Wusic</h1>
-            <a class="navbar-brand" href="/">Wusic</a>
-            <h3>As musicas mais recentes gratuitas</h3>
-           
+
+            <div class="col-md-12">
+                <h1 class="hide">Wusic</h1>
+                <a class="navbar-brand" href="/#/">Wusic  <small>As musicas mais recentes gratuitas</small></a>
+            </div>
+
+            <div class="col-md-4 hide">
+              <div class="ui player" ng-controller="PlayerController">
+                <!--<span>Playing:<br/>{{name}}<br/>{{artist}}</span>-->      
+                <audio src="{{mp3 | trusted}}" autoplay ></audio>
+              </div>
+            </div>
+
+     
+            
+
         </div>
       </div>
     </div>
     
     <!-- Application Content -->
-    <div class="container">
+    <div class="view content">
       <div ng-view=""></div>
     </div>
     
+    <div class="ui loader">
+      <div id="bars">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+
+        </ul>
+      </div>
+    </div>
 
 
 
@@ -71,13 +96,14 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/Shared/functions.js"></script>
     <script src="scripts/Shared/freemusicService.js"></script>
+    <script src="scripts/Shared/PlayerController.js"></script>
     <script src="scripts/Feed/FeedController.js"></script>
     <script src="scripts/Music/MusicController.js"></script>
     <!-- endbuild -->
 
     <script>
       WebFontConfig = {
-    google: { families: [ 'Raleway:400,700,100:latin'  ] }
+    google: { families: [ 'Open+Sans:400,800,100:latin'  ] }
   };
   (function() {
     var wf = document.createElement('script');

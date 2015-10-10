@@ -27,9 +27,24 @@ angular
       .when('/music/:name', {
         templateUrl: 'views/music.html',
         controller: 'MusicController',
-        controllerAs: 'music'
+        controllerAs: 'musicshow'
       })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .filter('trusted', ['$sce', function ($sce) {
+    return function(url) {
+        return $sce.trustAsResourceUrl(url);
+    };
+  }])
+  .directive('imgload', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.bind('load', function() {
+                scope.$apply(attrs.imgload);
+            });
+        }
+    };
+});

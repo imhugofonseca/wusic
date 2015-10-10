@@ -11,7 +11,7 @@ angular.module('wusicApp')
 
 		// Using YQL because no CORS or JSONP
 		var apiUrl = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20json%20where%20url%20%3D'http%3A%2F%2Ffreemusicarchive.org%2Frecent.json'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
-		var getData;
+		var getData = null;
 
 		return {
 

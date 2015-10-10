@@ -1,15 +1,28 @@
-<div class="feed">
+<div class="container">
+	<ul class="page music-list">
 
-	<div class="ui music-card col-lg-3 col-md-4 col-sm-4 col-xs-12"  ng-repeat="music in musics">
+		<li class="ui music-card col-xs-12 col-sm-4 col-md-3 col-lg-3"  ng-repeat="music in musics">
+			
+			<div class="out-img w100">
+				<img class="music-img " imgload="countLoad()" src="{{ music.track_image_file }}" alt="{{ music.track_title }}" />
+				<div class="music-img-overlay">
+					<div class="play-container">
+					  <span class="pause-btn"   ng-click="pause($event)">
+					    <span class="pause" ></span>
+					  </span>
+					  <span class="play"  ng-click="play($event, music)"></span>
+					</div>
+				</div>
+			</div>
 
-		<img class="music-img " src="{{ music.track_image_file }}" alt="{{ music.track_title }}" />
-		
 
-		<div class="info ">
-			<h5 class="music-title">{{ music.track_title }}</h5>
-			<p class="music-text"><small class="text-muted">{{ music.artist_name }}</small></p>
-		</div>
-	</div>
-
-
+				
+			<div class="info ">
+				<a href="#/music/{{ music.track_handle }}">
+					<h5 class="music-title">{{ music.track_title }}</h5>
+					<p class="music-text"><small class="text-muted">{{ music.artist_name }}</small></p>
+				</a>
+			</div>
+		</li>
+	</ul>
 </div>
