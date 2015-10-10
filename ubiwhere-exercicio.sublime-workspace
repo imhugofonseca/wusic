@@ -3,6 +3,78 @@
 	{
 		"selected_items":
 		[
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"pla",
+				"playerService"
+			],
+			[
+				"se",
+				"secondary"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"a",
+				"absolute"
+			],
+			[
+				"play",
+				"playerService"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"musi",
+				"music-img-overlay"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"list-st",
+				"list-style-type"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"car",
+				"card-img-overlay"
+			],
+			[
+				"ap",
+				"apiUrl"
+			],
+			[
+				"get",
+				"getData"
+			]
 		]
 	},
 	"buffers":
@@ -45,22 +117,53 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/hugo/Desktop/Ubiwhere"
+		"/C/Users/hugo/Desktop/Ubiwhere",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/images",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/styles",
+		"/C/Users/hugo/Desktop/Ubiwhere/dist",
+		"/C/Users/hugo/Desktop/Ubiwhere/node_modules"
 	],
 	"file_history":
 	[
+		"/C/Users/hugo/Desktop/Ubiwhere/web.js",
+		"/C/Users/hugo/Desktop/Ubiwhere/bower.json",
+		"/C/Users/hugo/Desktop/Ubiwhere/Gruntfile.js",
+		"/C/Users/hugo/Desktop/Ubiwhere/.gitignore",
+		"/C/Users/hugo/Desktop/Ubiwhere/Procfile",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/styles/_wusic.scss",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/.htaccess",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/styles/_animations.scss",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/scripts/Shared/PlayerController.js",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/scripts/Shared/functions.js",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/scripts/Music/MusicController.js",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/scripts/Feed/FeedController.js",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/scripts/Shared/freemusicService.js",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/scripts/app.js",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/styles/_media.scss",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/views/list.html",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/views/music.html",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/index.html",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/styles/main.scss",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/scripts/feed/FeedController.js",
+		"/C/Users/hugo/Desktop/Ubiwhere/bower_components/bootstrap/.bower.json",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/scripts/controllers/music.js",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/scripts/services/freemusic.js",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/scripts/controllers/list.js",
+		"/C/Users/hugo/Desktop/Ubiwhere/README.md",
+		"/C/Users/hugo/Desktop/Ubiwhere/app/views/main.html",
 		"/C/Users/hugo/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/hugo/.homestead/Homestead.yaml"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 30.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 158.0,
 		"where_history":
 		[
+			"*"
 		]
 	},
 	"find_state":
@@ -68,6 +171,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ubiwhereApp",
+			"cdnify"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -88,15 +193,20 @@
 			"sheets":
 			[
 			]
+		},
+		{
+			"sheets":
+			[
+			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 30.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 63.0
 	},
 	"layout":
 	{
@@ -107,11 +217,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.885866948193,
 			1.0
 		],
 		"rows":
@@ -129,7 +246,7 @@
 	"project": "ubiwhere-exercicio.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 56.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -167,7 +284,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 331.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

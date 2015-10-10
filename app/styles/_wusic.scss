@@ -1,9 +1,6 @@
 
 // UI components
 .ui {
-
-	
-
 	// Music card
 	&.music-card {
 
@@ -15,7 +12,8 @@
 		float: none!important;
 		display: inline-block;
 		vertical-align: top;
-		
+
+		// Big card
 		&.big {
 			width:100%;
 
@@ -87,7 +85,7 @@
 
 		}
 
-
+		// Info
 		.music-img, .info {
 
 		}
@@ -113,7 +111,8 @@
 
 
 		}
-
+		
+		// Image
 		.out-img {
 
 			&.w100 {

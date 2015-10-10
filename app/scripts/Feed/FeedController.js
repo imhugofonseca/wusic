@@ -24,7 +24,7 @@ angular.module('wusicApp')
 	  		
 	  		});
 
-  		}else {
+  		} else {
         $scope.musics = freeMusicService.list();
       }
 
@@ -32,12 +32,14 @@ angular.module('wusicApp')
   		// Wait for all images to load
   		// Looks better
   		$scope.countLoad = function () {
+
   			if(count >= $scope.musics.length-1){
   				$('.loader').addClass('loaded');
   				count = 0;
   			}
 
   			count++;
+        
   		}
   		
   		$scope.play = playerService.playExe;
