@@ -38,6 +38,17 @@ angular
         return $sce.trustAsResourceUrl(url);
     };
   }])
+  .directive('fallbackimg', function () {
+    var fallbackimg = {
+      link: function postLink(scope, iElement, iAttrs) {
+        iElement.bind('error', function() {
+          angular.element(this).attr("src", iAttrs.fallbackimg);
+        });
+      }
+     }
+     return fallbackimg;
+  })
+
   .directive('imgload', function() {
     return {
         restrict: 'A',
@@ -45,6 +56,7 @@ angular
             element.bind('load', function() {
                 scope.$apply(attrs.imgload);
             });
+
         }
-    };
-});
+    }
+  });

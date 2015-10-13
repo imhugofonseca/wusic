@@ -33,7 +33,7 @@
             <div class="col-md-4 hide">
               <div class="ui player" ng-controller="PlayerController">
                 <!--<span>Playing:<br/>{{name}}<br/>{{artist}}</span>-->      
-                <audio src="{{mp3 | trusted}}" autoplay ></audio>
+                <audio ng-src="{{mp3 | trusted}}" autoplay ></audio>
               </div>
             </div>
 

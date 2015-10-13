@@ -12,6 +12,7 @@ angular.module('wusicApp')
   .controller('FeedController', function ($scope, $rootScope, freeMusicService, playerService) {
 
   		$scope.musics = null;
+      
   		$scope.playingId = playerService.id;
   		var count = 0;
 

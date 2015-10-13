@@ -4,7 +4,7 @@
 		<li class="ui music-card col-xs-12 col-sm-4 col-md-3 col-lg-3"  ng-repeat="music in musics">
 			
 			<div class="out-img w100">
-				<img class="music-img " imgload="countLoad()" src="{{ music.track_image_file }}" alt="{{ music.track_title }}" />
+				<img class="music-img "  fallbackimg="images/noimg.jpg" imgload="countLoad()" ng-src="{{ music.track_image_file }}"  erralt="{{ music.track_title }}" />
 				<div class="music-img-overlay" ng-class="music.track_id == playingId ? 'playing' : ''">
 					<div class="play-container" ng-class="music.track_id == playingId ? 'playing' : ''">
 					  <span class="pause-btn"   ng-click="pause($event)">
