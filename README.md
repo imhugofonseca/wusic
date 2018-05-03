@@ -1,11 +1,11 @@
 # Wusic
 Simple music fetcher from freemusic API
 
-##Live
+## Live
 [Live](https://wusic.herokuapp.com/#/)
 
 
-###Using dist
+### Using dist
 Just upload the contents into a webserver and voila
 
 
